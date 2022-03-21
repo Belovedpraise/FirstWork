@@ -1,0 +1,104 @@
+#contain{
+width: 23%;
+height: 630px;
+background-color: white;
+border-radius: 40px;
+border: 10px rgb(47, 46, 46) ridge;
+margin-left: 500px;
+box-shadow: black 1px 2px 1px 2px;
+}
+
+#inpu{
+margin-top: 30px;
+height: 90px;
+width: 99%;
+background-color: rgb(194, 179, 152);
+}
+
+#buton{
+margin-top: 25px;
+}
+
+#in3{
+margin-left: 60px;
+}
+
+#in11{
+    margin-left: 135px;
+}
+
+#in13{
+    margin-top: 15px;
+    width: 12%;
+}
+
+#in19{
+    margin-top: 15px;
+    width: 12%;
+}
+#in25{
+    margin-top: 15px;
+    width: 12%;
+}
+
+#in31{
+    margin-top: 22px;
+    width: 16%;
+    height: 28px;
+}
+
+#in36{
+    margin-top: 10px;
+    width: 16%;
+    height: 28px;
+}
+
+#in41{
+    margin-top: 10px;
+    width: 16%;
+    height: 28px;
+}
+
+#in46{
+    margin-top: 10px;
+    width: 16%;
+    height: 28px;
+}
+
+.inputt{
+margin-left: 12px;
+width: 12%;
+}
+
+.inputtt{
+margin-left: 12px;
+width: 15%;
+height: 28px;
+font-weight: bold;
+}
+ 
+.inpuc{
+border-radius: 100px;
+width: 19%;
+height: 20px;
+}
+
+.inpucc{
+    border-radius: 100px;
+    width: 35%;
+    height: 30px;
+    }
+
+    #word{
+    margin-top: 10px;
+    color:white;
+    font-family: sans-serif;
+    font-weight: bold;
+    }
+
+#cir{
+background-color: burlywood;
+border-radius: 500px;
+width: 50%;
+height: 70px;
+}

@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div  id="contain">
+      <div id="word"><p style="padding-left:10px;">CASIO</p></div>
+      <input type="text" id="inpu" value="0">
+ <div  id="buton">
+      <table>
+        <tr>
+          <td>
+         
+            <input type="button" value="SHIFT" id="in1" class="inpuc">
+            <input type="button"  value="APLHA" id="in2"class="inpuc">
+            <input type="button" value="MODE" id="in3"class="inpuc">
+            <input type="button"  value="ON" id="in4"class="inpuc">
+       
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+            <div id="cir">
+              <input type="button" value="" id="in5"class="inpucc">
+              <input type="button"  value="" id="in6"class="inpucc"><br><br>
+              <input type="button" value="" id="in7"class="inpucc">
+              <input type="button"  value="" id="in8"class="inpucc">
+            </div>
+          </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="button" value="Abs" id="in9">
+            <input type="button"  value="x3" id="in10">
+            <input type="button" value="x-1" id="in11">
+            <input type="button"  value="log-{}" id="in12">
+          </td>
+        </tr>
+
+    <!-- Arimethic rows     -->
+        <tr>
+          <td>
+            <input type="button" value="o%" id="in13">
+            <input type="button"  value="^" id="in14" class="inputt">
+            <input type="button" value="x" id="in15" class="inputt">
+            <input type="button"  value="x2" id="in16" class="inputt">
+            <input type="button" value="Log" id="in17" class="inputt" onclick="specialFunction('log')">
+            <input type="button"  value="in" id="in18" class="inputt">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="button" value="(-)" id="in19" onclick="Add_value('-')">
+            <input type="button"  value="@+++" id="in20" class="inputt">
+            <input type="button" value="hyp" id="in21" class="inputt">
+            <input type="button"  value="sin" id="in22" class="inputt" onclick="specialFunction('sin')">
+            <input type="button" value="cos" id="in23" class="inputt" onclick="specialFunction('cos')">
+            <input type="button"  value="tan" id="in24" class="inputt" onclick="specialFunction('tan')">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="button" value="RCL" id="in25" >
+            <input type="button"  value="ENG" id="in26" class="inputt">
+            <input type="button" value="(" id="in27" class="inputt">
+            <input type="button"  value=")" id="in28" class="inputt" >
+            <input type="button" value="s++D" id="in29" class="inputt">
+            <input type="button"  value="m+" id="in30" class="inputt">
+          </td>
+        </tr>
+
+<!-- the next five row -->
+        <tr>
+          <td>
+            <input type="button" value="7" id="in31" onclick="Add_value(7)">
+            <input type="button"  value="8" id="in32" class="inputtt"onclick="Add_value(8)">
+            <input type="button" value="9" id="in33" class="inputtt"onclick="Add_value(9)">
+            <input type="button"  value="DEL" id="in34" class="inputtt" onclick="DeleteOne()">
+            <input type="button" value="AC" id="in35" class="inputtt" onclick="DeleteAll()">
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <input type="button" value="4" id="in36" onclick="Add_value(4)">
+            <input type="button"  value="5" id="in37" class="inputtt" onclick="Add_value(5)">
+            <input type="button" value="6" id="in38"  class="inputtt"onclick="Add_value(6)">
+            <input type="button"  value="*" id="in39" class="inputtt" onclick="Add_value('*')">
+            <input type="button" value="/" id="in40"  class="inputtt" onclick="Add_value('/')">
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <input type="button" value="1" id="in41" onclick="Add_value(1)">
+            <input type="button"  value="2" id="in42"  class="inputtt" onclick="Add_value(2)">
+            <input type="button" value="3" id="in43"  class="inputtt" onclick="Add_value(3)">
+            <input type="button" value="+" id="in44"  class="inputtt" onclick="Add_value('+')">
+            <input type="button" value="-" id="in45"  class="inputtt">
+          </td>
+        </tr>
+
+        <tr>
+          <td>  
+
+            <input type="button" value="0" id="in46" onclick="Add_value(0)">
+            <input type="button"  value="." id="in47"  class="inputtt">
+            <input type="button" value="*10*" id="in48"  class="inputtt">
+            <input type="button"  value="Ans" id="in49"  class="inputtt">
+            <input type="button" value="=" id="in50"  class="inputtt" onclick="total_value('=')">
+          </td>
+        </tr>
+        
+      </table>
+    </div>
+  </div>
+
+<script>
+function Add_value(show){
+  if (inpu.value == 0) {
+    inpu.value = show
+  }else
+    inpu.value += show
+}
+
+function total_value(){
+inpu.value = eval(inpu.value)
+}
+
+function DeleteAll(){
+  inpu.value = 0;
+}
+
+function DeleteOne(){
+	inpu.value = inpu.value.slice(0,-1);
+}
+
+function specialFunction(a){
+let myVar;
+let convertTodegree = inpu.value*Math.PI /180;
+if (a=='sin') {
+  myVar=Math.sin(convertTodegree);
+  }else if(a=='cos'){
+    myVar=Math.cos(convertTodegree);
+  }else if(a=='tan'){
+    myVar=Math.tan(convertTodegree);
+  }else if(a=='log'){
+    myVar=Math.log(convertTodegree);
+  }
+  inpu.value = myVar;
+}
+</script>
+
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
+</html>
